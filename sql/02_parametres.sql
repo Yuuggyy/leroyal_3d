@@ -6,17 +6,17 @@
 CREATE TABLE IF NOT EXISTS public.parametres (
   id            INTEGER PRIMARY KEY DEFAULT 1 CHECK (id = 1), -- force une seule ligne
   nom_restaurant TEXT DEFAULT 'O Poeta',
-  logo_url      TEXT,
+  logo_url      TEXT DEFAULT 'https://base44.app/api/apps/6a31a7682a8527ca694286bd/files/mp/public/6a31a7682a8527ca694286bd/a30f52440_opoeta_logo_fb.jpg',
   adresse       TEXT DEFAULT '4, Avenue du Cercle, Quartier du Golf, Gombe, Kinshasa, RDC',
   telephone     TEXT DEFAULT '+243 819 922 909',
   whatsapp      TEXT DEFAULT '243819922909',
-  horaires      TEXT DEFAULT 'Tous les jours 12h00 - 23h00',
+  horaires      TEXT DEFAULT 'Tous les jours 12h30 - 23h00',
   updated_at    TIMESTAMPTZ DEFAULT NOW()
 );
 
 -- Ligne unique par défaut
 INSERT INTO public.parametres (id, nom_restaurant, logo_url, adresse, telephone, whatsapp, horaires)
-VALUES (1, 'O Poeta', NULL, '4, Avenue du Cercle, Quartier du Golf, Gombe, Kinshasa, RDC', '+243 819 922 909', '243819922909', 'Tous les jours 12h00 - 23h00')
+VALUES (1, 'O Poeta', 'https://base44.app/api/apps/6a31a7682a8527ca694286bd/files/mp/public/6a31a7682a8527ca694286bd/a30f52440_opoeta_logo_fb.jpg', '4, Avenue du Cercle, Quartier du Golf, Gombe, Kinshasa, RDC', '+243 819 922 909', '243819922909', 'Tous les jours 12h30 - 23h00')
 ON CONFLICT (id) DO NOTHING;
 
 -- Trigger updated_at
