@@ -16,14 +16,14 @@ const STATUT_NEXT   = { recue: 'en_cours', en_cours: 'terminee' };
 
 // ─── Couleurs marque Le Royal ───────────────────────────────
 const C = {
-  primary:     '#1A3A2A',
-  primaryMid:  '#2D5E42',
+  primary:     '#1A237E',
+  primaryMid:  '#283593',
   primarySoft: 'rgba(26,35,126,0.08)',
-  gold:        '#B8943F',
-  goldLight:   '#D4AF6A',
-  beige:       '#F5EDD8',
-  cream:       '#FBF8F0',
-  dark:        '#1A1A14',
+  gold:        '#FFC107',
+  goldLight:   '#FFD54F',
+  beige:       '#F3F0FF',
+  cream:       '#FAFAFA',
+  dark:        '#0D0D2B',
   darkSoft:    'rgba(0,0,0,0.52)',
   border:      'rgba(255,193,7,0.25)',
   success:     '#1E8449',
@@ -49,7 +49,7 @@ function LoginForm({ onLogin }) {
   return (
     <div style={{
       minHeight: '100vh', display: 'flex', alignItems: 'center', justifyContent: 'center',
-      background: `linear-gradient(160deg, ${C.primary} 0%, #0D2019 50%, #1A1A14 100%)`,
+      background: `linear-gradient(160deg, ${C.primary} 0%, #0D1240 50%, #070B1A 100%)`,
       padding: 20,
     }}>
       <div style={{ width: '100%', maxWidth: 420 }}>
